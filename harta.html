@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Quick Start - Leaflet</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="C:\Users\ORDINATEUR\Desktop\an2_sem2\TW\leaflet.css" />
+<script src="C:\Users\ORDINATEUR\Desktop\an2_sem2\TW\leaflet.js"></script>
+
+
+	
+</head>
+<body>
+
+
+
+<div id="mapid" style="width: 1300px; height: 650px;"></div>
+<script>
+
+	var mymap = L.map('mapid').setView([46, 26], 7);
+
+	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		maxZoom: 18,
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox/streets-v11',
+		tileSize: 512,
+		zoomOffset: -1
+	}).addTo(mymap);
+
+	var Alba=L.marker([46.07, 23.57]).addTo(mymap)
+		.bindPopup("<b>Alba</b><br />Info.");
+		L.marker([45, 24.84]).addTo(mymap)
+		.bindPopup("<b>Arges</b><br />Info.").openPopup();
+	var Brasov=L.marker([45.65, 25.61]).addTo(mymap)
+		.bindPopup("<b>Brasov</b><br />Info.");	
+		var Bacau=L.marker([46.35, 26.55]).addTo(mymap)
+		.bindPopup("<b>Bacau</b><br />Info.");
+		var Iasi=L.marker([47.17, 27.57]).addTo(mymap)
+		.bindPopup("<b>Iasi</b><br />Info.");
+		var Botosani=L.marker([47.75, 26.67]).addTo(mymap)
+		.bindPopup("<b>Botosani</b><br />Info.");
+		var Vaslui=L.marker([46.65, 27.73]).addTo(mymap)
+		.bindPopup("<b>Vaslui</b><br />Info.");
+		var Suceava =L.marker([47.64, 26.26]).addTo(mymap)
+		.bindPopup("<b>Suceava</b><br />Info.");
+		var Cluj=L.marker([46.76, 23.58]).addTo(mymap)
+		.bindPopup("<b>Cluj</b><br />Info.");
+		var Tulcea=L.marker([45.17, 28.8]).addTo(mymap)
+		.bindPopup("<b>Tulcea</b><br />Info.");
+		var Sibiu=L.marker([45.8, 24.15]).addTo(mymap)
+		.bindPopup("<b>Sibiu</b><br />Info.");
+		var Timis=L.marker([45.75, 21.22]).addTo(mymap)
+		.bindPopup("<b>Timis</b><br />Info.");
+		mymap.event.addListener(Alba, 'mouseover', function() {
+    Alba.openPopup();
+});
+
+    
+
+</script>
+
+
+
+</body>
+</html>
+
+
