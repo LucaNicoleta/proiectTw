@@ -18,19 +18,25 @@ function Upload() {
                         count[j]++;
                     }
                     var type =[];
-                    document.write("<svg >");
+                    var creare=document.getElementById("main");
+                    var s="<svg width=\"1200\" height=\"900\" aria-labelledby=\"title\"><title id=\"title\">A bart chart showing information</title>";
                     for (var i =0; i <resul.length; i++) {
                         type.push([resul[i],count[i]]);
-                        var poz=i*70+50;
+                        var poz=i*60+10;
                         var r = Math.floor(Math.random() * 255);
 
     var g = Math.floor(Math.random() * 255);
 
     var b = Math.floor(Math.random() * 255);
-                        document.write("<rect x=\"0\" y=\""+poz+"\" width=\""+count[i]+"\" height=\"70\" style=\"fill:rgb("+r+","+g+","+b+")\" />");
+                        var w=count[i]/20;
+                        var x=100+w;
+                        var y=poz+30;
+                        if(w>900)
+                            x=x/2;
+                        s=s+"<g class=\"bar\"><rect x=\"50\" y=\""+poz+"\" width=\""+w+"\" height=\"50\" style=\"fill:rgb("+r+","+g+","+b+")\" /><text x=\""+x+"\" y=\""+y+"\" dy=\".35em\">"+resul[i]+" ( "+count[i]+" )</text></g>";
                     }
-                    document.write("</svg>");
-                    document.write(type.join());
+                    s=s+"</svg>";
+                    creare.innerHTML =s;
                 
                 
                 }
