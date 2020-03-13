@@ -23,16 +23,16 @@ function Upload() {
                     for (var i =0; i <resul.length; i++) {
                         type.push([resul[i],count[i]]);
                         var poz=i*60+10;
-                        var r = Math.floor(Math.random() * 255);
+                        var r = 55;
 
-    var g = Math.floor(Math.random() * 255);
+    var g = 255-count[i]/255;
 
-    var b = Math.floor(Math.random() * 255);
+    var b = 255;
                         var w=count[i]/20;
                         var x=100+w;
                         var y=poz+30;
                         if(w>900)
-                            x=x/2;
+                            x=x/5;
                         s=s+"<g class=\"bar\"><rect x=\"50\" y=\""+poz+"\" width=\""+w+"\" height=\"50\" style=\"fill:rgb("+r+","+g+","+b+")\" /><text x=\""+x+"\" y=\""+y+"\" dy=\".35em\">"+resul[i]+" ( "+count[i]+" )</text></g>";
                     }
                     s=s+"</svg>";
