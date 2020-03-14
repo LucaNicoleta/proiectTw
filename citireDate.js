@@ -17,15 +17,17 @@ function Upload() {
                      else
                         count[j]++;
                     }
-                    var type =[];
+                    var type =count.slice();
+                    type.sort(function(a, b){return a - b});
+                    var ci=255/type.length;
                     var creare=document.getElementById("main");
-                    var s="<svg width=\"1200\" height=\"900\" aria-labelledby=\"title\"><title id=\"title\">A bart chart showing information</title>";
+                    var s="<svg width=\"1200\" height=\"900\" fill=Grey aria-labelledby=\"title\"><title id=\"title\">A bart chart showing information</title>";
                     for (var i =0; i <resul.length; i++) {
-                        type.push([resul[i],count[i]]);
+                       // type.push([resul[i],count[i]]);
                         var poz=i*60+10;
-                        var r = 55;
+                        var r = 0;
 
-    var g = 255-count[i]/255;
+    var g =255-ci*type.indexOf(count[i]);
 
     var b = 255;
                         var w=count[i]/20;
