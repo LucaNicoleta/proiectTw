@@ -8,9 +8,6 @@
 
 }
 
-svg{
-   
-}
 .cerc
 {
     border-radius: 50%;
@@ -58,10 +55,11 @@ main {
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
+  padding: 11px 14px;
+  font-size: 25px;
   width: 25%;
-  
+  font-family: 'Stardos Stencil';
+  font-weight: bold;
   background-color: #a2a2d1;
 }
 .tablink:hover {
@@ -381,7 +379,10 @@ body {
 
     flex: 1;
 
-    justify-content: flex-end;
+    justify-content: center;
+    text-align: center;
+    color:white;
+    font-family: 'Stardos Stencil';
 
 }
 
