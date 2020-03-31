@@ -1,0 +1,726 @@
+.container {
+
+    max-width: 90%;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+}
+
+svg{
+   
+}
+.cerc
+{
+    border-radius: 50%;
+    position: absolute;
+}
+
+.cerc .title {
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  left:50%;
+  /* Position the tooltip */
+  position: relative;
+  
+}
+
+.cerc:hover .title {
+  visibility: visible;
+}
+
+
+main {
+
+     width: 100%;
+}
+.Marca{
+     width: 300px;
+    height: 250px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 0;
+}
+.title
+{
+    background-color: grey;
+     
+}
+.optiuni .tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+  
+  background-color: #a2a2d1;
+}
+.tablink:hover {
+  background-color: #777;
+}
+main .optiuni
+{
+    height: 25%;
+    width: 100%;
+
+
+}
+.logo img {
+
+    height: 60px;
+
+    margin-top: 10px;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+body {
+
+    margin: 0;
+
+}
+
+
+
+header {
+
+    box-shadow: 0 4px 24px 0 rgba(103,151,255,.1), 0 12px 64px 0 rgba(103,151,255,.1);
+
+    background-color: #23234e;
+
+    z-index:9;
+
+}
+
+.wrapper, header {
+
+    display: flex;
+
+    flex-direction: row;
+
+}
+
+
+
+aside {
+
+    background: #23234e;
+
+    flex: 0 0 280px;
+
+}
+
+.logo{
+
+    flex: 0 0 280px;
+
+    background: #1b1b3e;
+
+    text-align: center;
+
+}
+
+
+aside > h2 {
+
+    background-color: #29295a;
+
+    margin-top: 0;
+
+    margin-bottom: 0;
+
+    padding-top: 12px;
+
+    padding-bottom: 12px;
+
+    text-align: center;
+
+    color: #fff;
+
+    font-size: 16px;
+
+    text-transform: uppercase;
+
+    font-family: 'Stardos Stencil', cursive;
+
+}
+
+section.dashboard-boxes .title {
+
+    margin-bottom: 50px;
+
+}
+
+nav ul {
+
+    list-style-type: none;
+
+    padding-left: 0;
+
+    margin-top: 0;
+
+    margin-bottom: 0;
+
+}
+
+
+
+nav ul li a {
+
+    padding-left: 20px;
+
+    padding-top: 20px;
+
+    padding-bottom: 20px;
+
+    display: block;
+
+    color: #a2a2d1;
+
+    text-decoration: unset;
+
+}
+
+i.fas.fa-caret-down {
+
+    margin-left: 20px;
+
+}
+
+nav ul ul a {
+
+    padding-left: 40px;
+
+}
+
+
+
+nav span {
+
+    padding-left: 10px;
+
+}
+
+nav a.active {
+
+    background-color: rgba(0,0,0,0.2);
+
+    border-left: 5px solid #a2a2d1;
+
+}
+
+
+
+nav ul li a {
+
+    border-left: 5px solid transparent;
+
+    transition: border-left-color .4s ease, background-color .4s ease;
+
+}
+
+
+
+nav ul li a:hover {
+
+    border-left-color: #a2a2d1;
+
+    background-color: rgba(0,0,0,0.2);
+
+}
+
+
+
+body {
+
+    display: flex;
+
+    flex-direction: column;
+
+    height: 100vh;
+
+    flex-flow: column;
+
+}
+
+
+
+.wrapper {
+
+    flex-grow: 1;
+
+    flex-shrink: 1;
+
+    flex-basis: auto;
+
+}
+
+.dropdown ul.hide-submenu {
+
+    max-height: 1px;
+
+}
+
+
+
+.dropdown ul:not(.hide-submenu) {
+
+    max-height: 500px;
+
+}
+
+
+
+.dropdown ul {
+
+    transition: max-height 1s ease;
+
+    overflow: hidden;
+
+}
+
+.three-columns {
+
+    display: flex;
+
+    flex-direction: row;
+
+}
+
+
+
+.three-columns > article {
+
+    flex: 1;
+
+    text-align: center;
+
+}
+
+.box-wrapper {
+
+    max-width: 300px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    border-top: 11px solid #22224e;
+
+    background: #efeff5;
+
+    padding-top: 30px;
+
+    padding-bottom: 30px;
+
+    border-radius: 8px;
+
+    box-shadow: 0px 0px 10px -7px rgba(0,0,0,0.75);
+
+}
+
+
+
+.box-wrapper>i {
+
+    font-size: 27px;
+
+    padding-bottom: 6px;
+
+}
+
+
+
+.number {
+
+    font-size: 32px;
+
+    margin-top: 5px;
+
+    margin-bottom: 6px;
+
+    font-family: 'Quicksand', cursive;
+
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+
+}
+
+
+
+.content {
+
+    font-size: 16px;
+
+    font-family: 'Stardos Stencil', cursive;
+
+    letter-spacing: 0.02em;
+
+}
+
+
+
+/*Mobile menu icon */
+
+.right-area {
+
+    display: flex;
+
+    flex: 1;
+
+    justify-content: flex-end;
+
+}
+
+
+
+.mobile_menu i {
+
+    color: #fff;
+
+    font-size: 30px;
+
+    margin-right: 40px;
+
+}
+
+
+
+.mobile_menu {
+
+    align-self: center;
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    display:none;
+
+}
+
+p.menu-label {
+
+    color: #fff;
+
+    text-transform: uppercase;
+
+    font-family: 'Quicksand';
+
+    font-weight: 800;
+
+    letter-spacing: 0.05em;
+
+    margin-bottom: 5px;
+
+    margin-top: -3px;
+
+    position: relative;
+
+    right: 10px;
+
+}
+
+/*end mobile menu icon*/
+
+
+
+/*dashboard procentaj masini*/
+
+.procentaj-masini circle {
+
+  fill: #ddd;
+
+  stroke: #22224e;
+
+  stroke-width: 150;
+
+  stroke-dasharray: 0 628;
+
+  transition: stroke-dasharray .3s ease;
+
+}
+
+
+
+.procentaj-masini svg {
+
+  margin: 0 auto;
+
+  transform: rotate(-90deg);
+
+  background: #ddd;
+
+  border-radius: 50%;
+
+  display: block;
+
+}
+
+.procentaj-masini figcaption {
+
+    font-family: 'Quicksand';
+
+    text-transform: uppercase;
+
+    font-weight: 800;
+
+    font-size: 24px;
+
+    margin-bottom: 29px;
+
+    text-align: center;
+
+}
+
+
+
+.procentaj-masini {
+
+    padding-top: 40px;
+
+}
+
+.masini-menu div:last-of-type {
+
+    margin-right: 0;
+
+}
+
+.masini-menu div {
+
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    background: #fff;
+
+    border-radius: 6px;
+
+    margin-left: 5px;
+
+    margin-right: 5px;
+
+    margin-bottom: 10px;
+
+}
+
+  
+
+.masini-menu div.active {
+
+    background-color: #22224e;
+
+    color: white;
+
+  }
+
+.procentaj-masini .two-columns {
+
+    display: flex;
+
+    flex-direction: row;
+
+}
+
+.title{
+
+    font-family: 'Quicksand';
+
+    text-transform: uppercase;
+
+    font-weight: 800;
+
+    font-size: 24px;
+
+    text-align: center;
+
+}
+
+.title:after {
+
+    content: '';
+
+    height: 7px;width: 150px;
+
+    background: #000;display: block;margin-left: auto;
+
+    margin-right: auto;margin-top: 15px;border-radius: 16px;
+
+}
+
+
+
+.procentaj-masini .title {
+
+    margin-bottom: 40px;
+
+}
+
+.procentaj-masini .title:after{
+
+    display: none;
+
+}
+
+.masini-menu {
+
+    margin-bottom: 25px;
+
+    text-align: center;
+
+}
+
+
+
+.procentaj-masini figure {
+
+    background: #efeff5;
+
+    border-radius: 8px;
+
+    box-shadow: 0px 0px 10px -7px rgba(0,0,0,0.75);
+
+    border-top: 11px solid #21214e;
+
+    padding-top: 30px;
+
+    padding-left: 15px;
+
+    padding-right: 15px;
+
+    padding-bottom: 30px;
+
+}
+
+
+
+/*end -- dashboard procentaj masini*/
+
+@media screen and (max-width:980px){
+
+    .mobile_menu{
+
+        display:block;
+
+    }
+
+    aside>h2 {
+
+        display: none;
+
+    }
+
+    
+
+    aside nav {
+
+        position: absolute;
+
+        right: 0;
+
+        background: #22224e;
+
+    }
+
+    aside nav a {
+
+        padding-right: 60px;
+
+    }
+
+    aside nav {
+
+        display: none;
+
+    }
+
+    
+
+    aside nav.show-menu {
+
+        display: block;
+
+    }
+
+    .wrapper {
+
+        flex-direction: column;
+
+    }
+
+    
+
+    .wrapper aside {
+
+        flex: 0;
+
+        z-index:9;
+
+    }
+
+    aside nav a {
+
+        font-size: 21px;
+
+    }
+
+    .three-columns article {
+
+        margin-left: 40px;
+
+        margin-right: 40px;
+
+    }
+
+}
+
+/*end mobile menu icon*/
+
+@media screen and (max-width:780px){
+
+    .procentaj-masini .two-columns {
+
+        flex-direction: column;
+
+    }
+
+    .three-columns article {
+
+        margin-left: 20px;
+
+        margin-right: 20px;
+
+    }
+
+}
+
+@media screen and (max-width:580px){
+
+    .three-columns {
+
+        flex-direction: column;
+
+    } 
+
+    .three-columns article{
+
+        margin-bottom: 30px;
+
+    }
+
+}
