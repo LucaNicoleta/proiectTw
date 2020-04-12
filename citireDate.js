@@ -18,7 +18,7 @@ function Upload() {
                         count[j]++;
                     }
                     var type =[];
-                    var creare=document.getElementById("main");
+                    var creare=document.getElementById("figure");
                     var s="<svg width=\"1200\" height=\"900\" aria-labelledby=\"title\"><title id=\"title\">A bart chart showing information</title>";
                     for (var i =0; i <resul.length; i++) {
                         type.push([resul[i],count[i]]);
