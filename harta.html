@@ -1,71 +1,197 @@
 <!DOCTYPE html>
-<html>
-<head>
-	
-	<title>Quick Start - Leaflet</title>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        
+    </head>
+    <body >
+        <title >Categorii nationale</title>
+        <header>
 
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="C:\Users\ORDINATEUR\Desktop\an2_sem2\TW\leaflet.css" />
-<script src="C:\Users\ORDINATEUR\Desktop\an2_sem2\TW\leaflet.js"></script>
+            <div class="logo">
+
+                <img alt="logo" src="logo.png"/>
+
+            </div>
+
+            <div class="right-area">
+                <h1>AUTOMOBILE CATEGORIZATE DUPA CATEGORIA NATIONALA</h1>
+                <div class="mobile_menu">
+                    
+                    <p class="menu-label">Menu</p>
+
+                    <i class="fas fa-bars"></i>
+                    
+                </div>
+
+            </div>
+
+        </header>
+
+        <div class="wrapper">
+
+            <aside>
+
+                <h2>Pagini</h2>
+
+                <nav>
+
+                    <ul>
+
+                        <li>
+
+                            <a class="active" href="index.html">
+
+                                <i class="fas fa-home"></i> 
+
+                                <span>Dashboard</span>
+
+                            </a>
+
+                        </li>
+
+                        <li class="dropdown">
+
+                            <a href="">
+
+                                <i class="far fa-chart-bar"></i>
+
+                                <span>Automobile categorizate</span>
+
+                                <i class="fas fa-caret-down"></i>
+
+                            </a>
+
+                            <ul>
+
+                                <li>
+
+                                    <a href="">
+
+                                        <i class="fas fa-globe-europe"></i>
+
+                                        <span>Dupa judet</span>
+
+                                    </a>
+
+                                </li>
+
+                                <li>
+
+                                    <a href="">
+
+                                        <i class="far fa-calendar-alt"></i>
+
+                                        <span>Dupa an</span>
+
+                                    </a>
+
+                                </li>
+
+                                <li>
+
+                                    <a href="">
+
+                                        <i class="fas fa-tag"></i>
+
+                                        <span>Dupa marca</span>
+
+                                    </a>
+
+                                </li>
+
+                                <li>
+
+                                    <a href="">
+
+                                        <i class="fas fa-truck-pickup"></i>
+
+                                        <span>Dupa categorie nationala</span>
+
+                                    </a>
+
+                                </li>
+
+                                <li>
+
+                                    <a href="">
+
+                                        <i class="fas fa-bus-alt"></i>
+
+                                        <span>Dupa categorie comunitara</span>
+
+                                    </a>
+
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+                        <li>
+
+                            <a href="contact.html">
+
+                                <i class="fas fa-envelope-open-text"></i>
+
+                                <span>Contact</span>
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+            </aside>
+            
+            <main id="main" >
+<div class="optiuni">
+    <button class="tablink" onclick="buton3()">2017</button>
+    <button class="tablink" onclick="buton1()">2018</button>
+  <button class="tablink" onclick="buton2()" id="defaultOpen">2019</button>
+  <button class="tablink" onclick="buton3()">2020</button>
+</div>
+<div class="afisaj" id="afisaj"></div>                
+
+  <div id="map"></div>
+
+       <script type="text/javascript">
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+    if(xhttp.readyState === 4)
+    {
+      if(xhttp.status === 200 || xhttp.status == 0)
+      {
+        console.log(xhttp.responseText);
+        
+        
+        
+        }
+      }
+
+          
+  };
+        xhttp.open("GET", " https://api.openstreetmap.org/api/0.6/map?bbox=20,48,27,43", true);
+        xhttp.send();
+
+        </script>
+
+</div>
+<div id="dvCSV">
+</div>
+            </main>
+               
+        <footer>
 
 
-	
-</head>
-<body>
 
+        </footer>
 
-
-<div id="mapid" style="width: 1300px; height: 650px;"></div>
-<script>
-
-	var mymap = L.map('mapid').setView([46, 26], 7);
-
-	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-		maxZoom: 18,
-		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-		id: 'mapbox/streets-v11',
-		tileSize: 512,
-		zoomOffset: -1
-	}).addTo(mymap);
-
-	var Alba=L.marker([46.07, 23.57]).addTo(mymap)
-		.bindPopup("<b>Alba</b><br />Info.");
-		L.marker([45, 24.84]).addTo(mymap)
-		.bindPopup("<b>Arges</b><br />Info.").openPopup();
-	var Brasov=L.marker([45.65, 25.61]).addTo(mymap)
-		.bindPopup("<b>Brasov</b><br />Info.");	
-		var Bacau=L.marker([46.35, 26.55]).addTo(mymap)
-		.bindPopup("<b>Bacau</b><br />Info.");
-		var Iasi=L.marker([47.17, 27.57]).addTo(mymap)
-		.bindPopup("<b>Iasi</b><br />Info.");
-		var Botosani=L.marker([47.75, 26.67]).addTo(mymap)
-		.bindPopup("<b>Botosani</b><br />Info.");
-		var Vaslui=L.marker([46.65, 27.73]).addTo(mymap)
-		.bindPopup("<b>Vaslui</b><br />Info.");
-		var Suceava =L.marker([47.64, 26.26]).addTo(mymap)
-		.bindPopup("<b>Suceava</b><br />Info.");
-		var Cluj=L.marker([46.76, 23.58]).addTo(mymap)
-		.bindPopup("<b>Cluj</b><br />Info.");
-		var Tulcea=L.marker([45.17, 28.8]).addTo(mymap)
-		.bindPopup("<b>Tulcea</b><br />Info.");
-		var Sibiu=L.marker([45.8, 24.15]).addTo(mymap)
-		.bindPopup("<b>Sibiu</b><br />Info.");
-		var Timis=L.marker([45.75, 21.22]).addTo(mymap)
-		.bindPopup("<b>Timis</b><br />Info.");
-		mymap.event.addListener(Alba, 'mouseover', function() {
-    Alba.openPopup();
-});
-
+<script src="barchar.js">
     
-
 </script>
-
-
-
-</body>
+    </body>
 </html>
-
-
