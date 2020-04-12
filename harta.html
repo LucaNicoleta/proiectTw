@@ -6,7 +6,7 @@
         
     </head>
     <body >
-        <title >Categorii nationale</title>
+        <title >Repartizarea pe judete</title>
         <header>
 
             <div class="logo">
@@ -16,7 +16,7 @@
             </div>
 
             <div class="right-area">
-                <h1>AUTOMOBILE CATEGORIZATE DUPA CATEGORIA NATIONALA</h1>
+                <h1>REPARTIZAREA PE JUDETE</h1>
                 <div class="mobile_menu">
                     
                     <p class="menu-label">Menu</p>
@@ -158,27 +158,8 @@
 
   <div id="map"></div>
 
-       <script type="text/javascript">
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-    if(xhttp.readyState === 4)
-    {
-      if(xhttp.status === 200 || xhttp.status == 0)
-      {
-        console.log(xhttp.responseText);
+       <script src="harta.js"></script>
         
-        
-        
-        }
-      }
-
-          
-  };
-        xhttp.open("GET", " https://api.openstreetmap.org/api/0.6/map?bbox=20,48,27,43", true);
-        xhttp.send();
-
-        </script>
-
 </div>
 <div id="dvCSV">
 </div>
@@ -186,12 +167,7 @@
                
         <footer>
 
-
-
         </footer>
 
-<script src="barchar.js">
-    
-</script>
     </body>
 </html>
